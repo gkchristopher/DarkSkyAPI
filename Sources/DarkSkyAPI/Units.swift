@@ -4,7 +4,7 @@ public enum Units: String, CaseIterable {
     case ca
     case si
 
-    var title: String {
+    public var title: String {
         switch self {
         case .us:
             return "United States"
@@ -17,7 +17,7 @@ public enum Units: String, CaseIterable {
         }
     }
 
-    var subTitle: String {
+    public var subTitle: String {
         switch self {
         case .us:
             return "Fahrenheit, miles, mph"

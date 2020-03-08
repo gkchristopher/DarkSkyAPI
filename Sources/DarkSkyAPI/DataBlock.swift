@@ -1,5 +1,5 @@
 public struct DataBlock: Codable {
-    let summary: String?
-    let icon: Icon?
-    let data: [DataPoint]
+    public let summary: String?
+    public let icon: Icon?
+    public let data: [DataPoint]
 }

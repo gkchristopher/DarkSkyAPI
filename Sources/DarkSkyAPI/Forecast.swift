@@ -1,10 +1,10 @@
 public struct Forecast: Codable {
-    let latitude: Double
-    let longitude: Double
-    let timezone: String?
-    let currently: DataPoint?
-    let minutely: DataBlock?
-    let hourly: DataBlock?
-    let daily: DataBlock?
-    let alerts: [Alert]?
+    public let latitude: Double
+    public let longitude: Double
+    public let timezone: String?
+    public let currently: DataPoint?
+    public let minutely: DataBlock?
+    public let hourly: DataBlock?
+    public let daily: DataBlock?
+    public let alerts: [Alert]?
 }

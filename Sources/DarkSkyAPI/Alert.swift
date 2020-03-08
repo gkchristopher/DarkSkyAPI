@@ -19,13 +19,13 @@ import Foundation
  An HTTP(S) URI that one may refer to for detailed information about the alert.
  */
 public struct Alert: Codable {
-    let description: String
-    let expires: Date
-    let regions: [String]
-    let severity: Severity
-    let time: Date
-    let title: String
-    let uri: String
+    public let description: String
+    public let expires: Date
+    public let regions: [String]
+    public let severity: Severity
+    public let time: Date
+    public let title: String
+    public let uri: String
 }
 
 public enum Severity: String, Codable {

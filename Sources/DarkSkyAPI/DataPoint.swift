@@ -1,38 +1,38 @@
 import Foundation
 
 public struct DataPoint: Codable {
-    let time: Date
-    let summary: String?
-    let icon: Icon?
-    let precipIntensity: Double?
-    let precipIntensityMax: Double?
-    let precipIntensityMaxTime: Date?
-    let precipProbability: Double?
-    let precipType: PrecipType?
-    let temperature: Double?
-    let temperatureHigh: Double?
-    let temperatureHighTime: Date?
-    let temperatureLow: Double?
-    let temperatureLowTime: Date?
-    let apparentTemperature: Double?
-    let apparentTemperatureHigh: Double?
-    let apparentTemperatureHighTime: Date?
-    let apparentTemperatureLow: Double?
-    let apparentTemperatureLowTime: Date?
-    let dewPoint: Double?
-    let humidity: Double?
-    let pressure: Double?
-    let windSpeed: Double?
-    let windGust: Double?
-    let windGustTime: Date?
-    let windBearing: Int?
-    let cloudCover: Double?
-    let uvIndex: Int?
-    let uvIndexTime: Date?
-    let visibility: Double?
-    let ozone: Double?
-    let nearestStormDistance: Double?
-    let sunriseTime: Date?
-    let sunsetTime: Date?
-    let moonPhase: Double?
+    public let time: Date
+    public let summary: String?
+    public let icon: Icon?
+    public let precipIntensity: Double?
+    public let precipIntensityMax: Double?
+    public let precipIntensityMaxTime: Date?
+    public let precipProbability: Double?
+    public let precipType: PrecipType?
+    public let temperature: Double?
+    public let temperatureHigh: Double?
+    public let temperatureHighTime: Date?
+    public let temperatureLow: Double?
+    public let temperatureLowTime: Date?
+    public let apparentTemperature: Double?
+    public let apparentTemperatureHigh: Double?
+    public let apparentTemperatureHighTime: Date?
+    public let apparentTemperatureLow: Double?
+    public let apparentTemperatureLowTime: Date?
+    public let dewPoint: Double?
+    public let humidity: Double?
+    public let pressure: Double?
+    public let windSpeed: Double?
+    public let windGust: Double?
+    public let windGustTime: Date?
+    public let windBearing: Int?
+    public let cloudCover: Double?
+    public let uvIndex: Int?
+    public let uvIndexTime: Date?
+    public let visibility: Double?
+    public let ozone: Double?
+    public let nearestStormDistance: Double?
+    public let sunriseTime: Date?
+    public let sunsetTime: Date?
+    public let moonPhase: Double?
 }
