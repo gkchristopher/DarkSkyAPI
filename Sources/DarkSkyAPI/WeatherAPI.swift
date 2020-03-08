@@ -27,13 +27,13 @@ class WeatherAPI {
     private static let baseURL = "https://3vrmbfn037.execute-api.us-east-1.amazonaws.com/prod/"
     #endif
 
-    func getForecast(for latitude: Double, and longitude: Double, completion: @escaping (Result<Forecast, NetworkError>) -> Void) {
+    func getForecast(for latitude: Double, and longitude: Double, units: Units = .us, completion: @escaping (Result<Forecast, NetworkError>) -> Void) {
         var url = URL(string: WeatherAPI.baseURL)!
         url.appendPathComponent("\(latitude),\(longitude)")
 
         var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false)!
         let flagsQueryItem = URLQueryItem(name: "exclude", value: "flags")
-        let unitsQueryItem = URLQueryItem(name: "units", value: Settings.shared.units.rawValue)
+        let unitsQueryItem = URLQueryItem(name: "units", value: units.rawValue)
         urlComponents.queryItems = [flagsQueryItem, unitsQueryItem]
         
         if let state = currentTask?.state, state == .running {
