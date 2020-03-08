@@ -1,4 +1,4 @@
-struct Forecast: Codable {
+public struct Forecast: Codable {
     let latitude: Double
     let longitude: Double
     let timezone: String?

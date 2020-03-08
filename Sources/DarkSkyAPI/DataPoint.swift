@@ -1,6 +1,6 @@
 import Foundation
 
-struct DataPoint: Codable {
+public struct DataPoint: Codable {
     let time: Date
     let summary: String?
     let icon: Icon?
@@ -35,29 +35,4 @@ struct DataPoint: Codable {
     let sunriseTime: Date?
     let sunsetTime: Date?
     let moonPhase: Double?
-
-}
-
-enum Icon: String, Codable {
-    case clearDay = "clear-day"
-    case clearNight = "clear-night"
-    case rain
-    case snow
-    case sleet
-    case wind
-    case fog
-    case cloudy
-    case partlyCloudyDay = "partly-cloudy-day"
-    case partlyCloudyNight = "partly-cloudy-night"
-
-    var smallIconName: String {
-        return self.rawValue + "-small"
-    }
-}
-
-enum PrecipType: String, Codable {
-    case rain
-    case snow
-    case sleet
-    case none
 }

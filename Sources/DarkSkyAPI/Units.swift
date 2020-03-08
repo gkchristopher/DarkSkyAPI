@@ -1,4 +1,4 @@
-enum Units: String, CaseIterable {
+public enum Units: String, CaseIterable {
     case us
     case uk2
     case ca

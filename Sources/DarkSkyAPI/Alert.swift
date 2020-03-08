@@ -18,7 +18,7 @@ import Foundation
  uri required
  An HTTP(S) URI that one may refer to for detailed information about the alert.
  */
-struct Alert: Codable {
+public struct Alert: Codable {
     let description: String
     let expires: Date
     let regions: [String]
@@ -28,7 +28,7 @@ struct Alert: Codable {
     let uri: String
 }
 
-enum Severity: String, Codable {
+public enum Severity: String, Codable {
     case advisory
     case watch
     case warning
