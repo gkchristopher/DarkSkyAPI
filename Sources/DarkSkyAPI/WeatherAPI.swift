@@ -7,7 +7,7 @@ public enum NetworkError: Error {
     case parsing
 }
 
-public class WeatherAPI {
+open class WeatherAPI {
     
     private var currentTask: URLSessionDataTask?
 
@@ -27,7 +27,7 @@ public class WeatherAPI {
     private static let baseURL = "https://3vrmbfn037.execute-api.us-east-1.amazonaws.com/prod/"
     #endif
 
-    public func getForecast(for latitude: Double, and longitude: Double, units: Units = .us, completion: @escaping (Result<Forecast, NetworkError>) -> Void) {
+    open func getForecast(for latitude: Double, and longitude: Double, units: Units = .us, completion: @escaping (Result<Forecast, NetworkError>) -> Void) {
         var url = URL(string: WeatherAPI.baseURL)!
         url.appendPathComponent("\(latitude),\(longitude)")
 
