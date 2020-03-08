@@ -20,15 +20,15 @@ open class WeatherAPI {
         config.timeoutIntervalForRequest = 20
         return config
     }()
-
-    #if DEBUG
-    private static let baseURL = "https://3vrmbfn037.execute-api.us-east-1.amazonaws.com/dev/"
-    #else
-    private static let baseURL = "https://3vrmbfn037.execute-api.us-east-1.amazonaws.com/prod/"
-    #endif
+    
+    private var baseURL: String
+    
+    public init(baseURL: String) {
+        self.baseURL = baseURL
+    }
 
     open func getForecast(for latitude: Double, and longitude: Double, units: Units = .us, completion: @escaping (Result<Forecast, NetworkError>) -> Void) {
-        var url = URL(string: WeatherAPI.baseURL)!
+        var url = URL(string: baseURL)!
         url.appendPathComponent("\(latitude),\(longitude)")
 
         var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false)!
